@@ -1,11 +1,11 @@
-# Ion  
+# Ion (WIP) 
 **Written in Python so you can write in Python**
 
 Ion is a lightweight, forward-leaning Python IDE built by people who actually write code, not by committees. It’s designed to be fast, minimal, and dead-simple to extend. If you want a tool that gets out of your way and lets you actually build things, you’re in the right place.
 
 ---
 
-## Features
+## Features (WIP)
 
 ### • Project Creation Made Easy  
 Spin up a new project with sane defaults, automatic folder setup, and a generated `main.py` ready to go.
@@ -27,7 +27,7 @@ Ion is written in Python, so you can crack it open and mod it however you want. 
 
 ---
 
-## Why Ion?
+## Why Ion? (WIP)
 
 Because the world doesn’t need yet another bloated “IDE” pretending it’s a cloud OS. We dont shove Github Copilot in your face unlike some other enviorments. Ion sticks to the basics: write code, save code, run code. That’s it. Old-school discipline with modern speed. 
 
