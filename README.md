@@ -46,7 +46,7 @@ If you’ve got ideas, open an issue. If you’ve got opinions, welcome to the c
 
 ---
 
-## Contributing
+## Contributing (WIP)
 
 Pull requests are open to anyone who isn’t afraid to break things in the name of improvement.  
 Follow standard Git workflows. Don’t overthink it.

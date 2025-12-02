@@ -20,4 +20,4 @@ main()
     print("created succesfuly!")
 
     # issue opening specfically with the "pyPath"
-    editor.MyWidget.openScript(pyPath)
+    editor.MyWidget.openScript(pyPath, editor.MyWidget.self)

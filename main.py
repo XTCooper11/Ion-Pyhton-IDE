@@ -5,7 +5,7 @@ import json
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import QPushButton, QFileDialog, QInputDialog
 from functools import partial
-import file_init
+import fileM
 
 class MyWidget(QtWidgets.QWidget):
     def __init__(self):
@@ -39,6 +39,8 @@ class MyWidget(QtWidgets.QWidget):
             if of.exec():
                 folder_path = of.selectedFiles()[0]
                 print(f"Selected folder: {folder_path}")
+
+
         elif action == 'NewProject':
             print("New Project button clicked")
             pop, ok = QInputDialog.getText(None, "Enter Project Name", "Name: ")
@@ -60,7 +62,7 @@ class MyWidget(QtWidgets.QWidget):
                     print("Project made!")
 
                     path = os.path.dirname(config_path)
-                    file_init.makeMain(path)
+                    fileM.makeMain(path)
 
 
 

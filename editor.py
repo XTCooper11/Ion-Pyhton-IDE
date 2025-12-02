@@ -8,13 +8,8 @@ from PySide6.QtCore import Qt
 
 class MyWidget(QtWidgets.QWidget):
    
-    def openScript(pyPath, self):
-            print("opening")
-            pyPath, _ = QFileDialog.getOpenFileName(self, "Open File", "", "Python Files (*.py);;All Files (*)")
-            if pyPath:
-                with open(pyPath, "r") as f:
-                    self.editor.setPlainText(f.read())
-                    print(f"Loaded {pyPath}")
+    def openScript(pyPath):
+        print("opening in editor")
 
     def __init__(self):
         super().__init__()
