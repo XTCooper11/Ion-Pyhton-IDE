@@ -20,7 +20,5 @@ main()
         f.write(starter_code)
     print("created succesfuly!")
 
+    MyWidget().__init__()
     MyWidget().openScript(pyPath)
-    if (MyWidget().openScript(pyPath) == True): {
-        main.sys.exit()
-    }

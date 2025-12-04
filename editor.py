@@ -42,9 +42,6 @@ class MyWidget(QtWidgets.QWidget):
 
 
     def openScript(self, pyPath):
-        app = QtWidgets.QApplication([])
-        widget = MyWidget()
-        widget.show()
 
         with open(pyPath, 'r', encoding='utf-8') as f:
             content = f.read()
@@ -57,4 +54,9 @@ class MyWidget(QtWidgets.QWidget):
         except Exception as e:
             print(f"Error: {e}")
 
-        sys.exit(app.exec())
+if __name__ == "__main__":
+    app = QtWidgets.QApplication([])
+    widget = MyWidget()
+    widget.show()
+
+    sys.exit(app.exec())
