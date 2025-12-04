@@ -18,15 +18,18 @@ class MyWidget(QtWidgets.QWidget):
         self.label.setStyleSheet("font-size: 34px; font-weight: bold;")
         self.layout.addWidget(self.label)
 
-        self.button1 = QPushButton(self)
-        self.button1.setGeometry(40, 40, 100, 50)
-        self.button1.setText("Open Folder")
-        self.button1.clicked.connect(partial(self.clicked_btn, 'OpenFolder'))
-        self.layout.addWidget(self.button1)
+        self.button2 = QPushButton(self)
+        self.button2.setGeometry(40, 40, 100, 50)
+        self.button2.setText("Open Folder")
+        self.button2.setStyleSheet("background-color: #2196F3; color: white; border: none; padding: 15px 30px;")
+        self.button2.clicked.connect(partial(self.clicked_btn, 'OpenFolder'))
+        self.layout.addWidget(self.button2)
 
         self.button1 = QPushButton(self)
         self.button1.setGeometry(40, 40, 100, 50)
         self.button1.setText("New Project")
+        self.button1.setStyleSheet("background-color: #2196F3; color: white; border: none; padding: 15px 30px;")
+
         self.button1.clicked.connect(partial(self.clicked_btn, 'NewProject'))
         self.layout.addWidget(self.button1)
 
@@ -34,7 +37,6 @@ class MyWidget(QtWidgets.QWidget):
         if action == 'OpenFolder':
             print("Open Folder button clicked")
             of = QFileDialog(self, "Select Folder")
-            of.setFileMode(QFileDialog.FileMode.Directory)
             of.setDirectory("projects")
             if of.exec():
                 folder_path = of.selectedFiles()[0]

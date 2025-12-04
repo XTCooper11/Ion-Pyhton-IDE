@@ -1,0 +1,6 @@
+Todo:
+
+- Add editor opening capabilities
+- Finish editor GUI
+- Add open button capabilities
+- Package installer (easy GUI to download packakes with pip, EX: Django, PyGlet, Requests)

@@ -1,12 +1,13 @@
 import os
-import editor
+from editor import MyWidget
+import main
 
 def makeMain(path):
     print("making file")
 
     pyPath = os.path.join(path, "main.py")
     starter_code = """\
-        # This is the main file for your project
+# This is the main file for your project
 # You must ALWAYS have a main.py or re-route the start file
 
 def main():
@@ -19,5 +20,7 @@ main()
         f.write(starter_code)
     print("created succesfuly!")
 
-    # issue opening specfically with the "pyPath"
-    editor.MyWidget.openScript(pyPath, editor.MyWidget.self)
+    MyWidget().openScript(pyPath)
+    if (MyWidget().openScript(pyPath) == True): {
+        main.sys.exit()
+    }

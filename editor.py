@@ -3,13 +3,11 @@ import sys
 from PySide6 import QtWidgets
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout, QHBoxLayout, QTextEdit, QFileDialog
 from PySide6.QtCore import Qt
+import main
 
 
 
 class MyWidget(QtWidgets.QWidget):
-   
-    def openScript(pyPath):
-        print("opening in editor")
 
     def __init__(self):
         super().__init__()
@@ -43,13 +41,20 @@ class MyWidget(QtWidgets.QWidget):
         self.editor = QTextEdit()
 
 
+    def openScript(self, pyPath):
+        app = QtWidgets.QApplication([])
+        widget = MyWidget()
+        widget.show()
 
+        with open(pyPath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        self.editor.setPlainText(content)
 
+        try:
+            with open(pyPath, 'r', encoding='utf-8') as f:
+                content = f.read()
+                self.editor.setPlainText(content)
+        except Exception as e:
+            print(f"Error: {e}")
 
-if __name__ == "__main__":
-    app = QtWidgets.QApplication([])
-
-    widget = MyWidget()
-    widget.show()
-
-    sys.exit(app.exec())
+        sys.exit(app.exec())
